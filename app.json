@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "myskills",
-    "slug": "myskills",
+    "name": "myappskills",
+    "slug": "myappskills",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
