@@ -5,6 +5,7 @@ import BottomSheet from '@gorhom/bottom-sheet';
 import { Menu, MenuTypeProps } from '../../components/Menu';
 import { Skill } from '../../components/Skill';
 import { Button } from '../../components/Button';
+import FormContent from '../../components/FormContent';
 
 import { Container, Title, Input, Form, FormTitle } from './styles';
 
@@ -132,20 +133,7 @@ export function Home() {
         index={0}
         snapPoints={['1%', '35%']}
       >
-        <Form>
-          <FormTitle>{skill?.id ? 'Edit' : 'New'}</FormTitle>
-
-          <Input
-            placeholder="New skill..."
-            onChangeText={setName}
-            value={name}
-          />
-
-          <Button
-            title={skill.id ? "Edit" : "Save"}
-            onPress={handleSave}
-          />
-        </Form>
+        <FormContent name={name} setName={setName} skill={skill} handleSave={handleSave} />
       </BottomSheet>
     </Container>
   );
